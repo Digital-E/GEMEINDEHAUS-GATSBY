@@ -93,6 +93,8 @@
           }
 
           vid.addEventListener('progress', function(e) {
+            
+            vid.play();
 
             document.querySelector('.loading').style.display = 'inline-block';
             
@@ -107,6 +109,7 @@
             if(loadingProgress === 100) {
               document.querySelector('.loading').style.display = 'none';
               // vid.style.opacity = 1;
+              vid.play();
             }
 
             console.log(vid.buffered.end(0));
@@ -114,9 +117,4 @@
             console.log(vid.currentTime);
 
           });
-
-
-          // setTimeout(function(){
-          //   document.querySelector(".overlay").style.opacity = 0;
-          // },5000);
         </script></body></html>
